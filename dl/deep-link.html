@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../assets/icon-180.png" type="image/png">
+  <title>Get Trainix</title>
+  <style>
+    :root {
+      --bg: #0D0D0F;
+      --card: #1A1A1E;
+      --border: #2A2A2E;
+      --primary: #3B82F6;
+      --text: #F5F5F7;
+      --muted: #8E8E93;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+      text-align: center;
+    }
+    .icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      margin-bottom: 20px;
+      box-shadow: 0 12px 40px rgba(59,130,246,.25);
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 32px;
+      max-width: 320px;
+      line-height: 1.5;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 12px;
+      margin: 6px;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-secondary {
+      background: var(--card);
+      border: 1px solid var(--border);
+    }
+    .buttons { margin-top: 8px; }
+    .status {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <img class="icon" src="../assets/icon-180.png" alt="Trainix app icon" width="96" height="96" />
+  <h1>Trainix</h1>
+  <p class="tagline">Your fitness studio for workouts, nutrition &amp; habits</p>
+
+  <div class="buttons" id="buttons">
+    <p class="status" id="status">Detecting your device…</p>
+  </div>
+
+  <script>
+    (function () {
+      var IOS_URL = 'https://apps.apple.com/app/id6760948921';
+      var ANDROID_URL = 'https://play.google.com/store/apps/details?id=com.codeyard.trainix';
+      var SCHEME_URL = 'trainix://';
+
+      var ua = navigator.userAgent || navigator.vendor || '';
+      var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var isAndroid = /Android/i.test(ua);
+
+      var container = document.getElementById('buttons');
+      var status = document.getElementById('status');
+
+      function showBothLinks() {
+        status.textContent = 'Download Trainix for free';
+        container.innerHTML =
+          '<a class="btn" href="' + IOS_URL + '">Download on the App Store</a><br>' +
+          '<a class="btn btn-secondary" href="' + ANDROID_URL + '">Get it on Google Play</a>';
+      }
+
+      if (isIOS) {
+        status.textContent = 'Redirecting to the App Store…';
+        var now = Date.now();
+        window.location.href = SCHEME_URL;
+        setTimeout(function () {
+          if (Date.now() - now < 2000) {
+            window.location.href = IOS_URL;
+          }
+        }, 800);
+        setTimeout(function () {
+          showBothLinks();
+        }, 2000);
+      } else if (isAndroid) {
+        status.textContent = 'Redirecting to Google Play…';
+        window.location.href = 'intent://open#Intent;scheme=trainix;package=com.codeyard.trainix;S.browser_fallback_url=' + encodeURIComponent(ANDROID_URL) + ';end';
+        setTimeout(function () {
+          window.location.href = ANDROID_URL;
+        }, 1500);
+        setTimeout(function () {
+          showBothLinks();
+        }, 2000);
+      } else {
+        showBothLinks();
+      }
+    })();
+  </script>
+
+</body>
+</html>

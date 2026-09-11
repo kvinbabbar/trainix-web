@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Trainix</title>
+  <style>
+    :root {
+      --bg: #0D0D0F;
+      --card: #1A1A1E;
+      --border: #2A2A2E;
+      --primary: #3B82F6;
+      --text: #F5F5F7;
+      --muted: #8E8E93;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 24px 16px 60px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .updated {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 32px;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+    p, li {
+      font-size: 15px;
+      color: #D1D1D6;
+    }
+    p { margin-bottom: 12px; }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    li { margin-bottom: 6px; }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+    .card p:last-child { margin-bottom: 0; }
+    .faq-section {
+      margin-top: 32px;
+    }
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 14px 16px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+    .faq-question:hover { opacity: 0.85; }
+    .faq-question::after {
+      content: '+';
+      font-size: 20px;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+    .faq-question.open::after { content: '−'; }
+    .faq-answer {
+      display: none;
+      padding: 0 16px 14px;
+      font-size: 14px;
+      color: #D1D1D6;
+      line-height: 1.6;
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+    }
+    .faq-answer.open { display: block; }
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Help &amp; FAQs</h1>
+  <p class="updated">Last Updated: September 11, 2026</p>
+
+  <div class="card">
+    <p>Find answers to common questions about <strong>Trainix</strong> below. Still stuck? <a href="mailto:codeyard.studio@gmail.com">Email us</a> and we'll get back to you.</p>
+  </div>
+
+  <!-- Getting Started -->
+  <div class="faq-section">
+    <h2>Getting Started</h2>
+    <div class="faq-item">
+      <div class="faq-question">How do I log a workout?</div>
+      <div class="faq-answer">From the Home tab, tap <strong>Start Workout</strong>. You can choose a saved template, start from a Plan, or begin from scratch. Add exercises, log your sets with weight and reps, then tap <strong>Finish Workout</strong> when done.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How do I create a workout template?</div>
+      <div class="faq-answer">Start a workout, add your exercises, and when you finish tap <strong>Finish + Save as Template</strong>. Your template will appear on the Home screen under Templates for future use.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What does the ghost text (pre-filled weight) mean?</div>
+      <div class="faq-answer">When logging a set, the weight and reps fields are pre-filled with your last logged values for that exercise. This saves time — just confirm the numbers and tap the checkmark to log.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How do I set my weekly goal?</div>
+      <div class="faq-answer">Go to <strong>Profile → Settings → Weekly Goal</strong>. You can choose 2–6 sessions per week. Your goal is shown on the Home screen ring and used for the Consistency metric in Analytics.</div>
+    </div>
+  </div>
+
+  <!-- Rest Timer -->
+  <div class="faq-section">
+    <h2>Rest Timer</h2>
+    <div class="faq-item">
+      <div class="faq-question">How does the auto rest timer work?</div>
+      <div class="faq-answer">After you log a set, the rest timer starts automatically (if enabled in <strong>Settings → Workout Experience</strong>). It counts down your configured rest duration, then vibrates to signal it's time for the next set.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Can I change the rest duration?</div>
+      <div class="faq-answer">Yes. Go to <strong>Settings → Workout Experience → Default Rest Duration</strong>. You can set it from 60s to 240s. Individual exercises can also override this using the per-exercise rest setting.</div>
+    </div>
+  </div>
+
+  <!-- Personal Records -->
+  <div class="faq-section">
+    <h2>Personal Records (PRs)</h2>
+    <div class="faq-item">
+      <div class="faq-question">How are PRs tracked?</div>
+      <div class="faq-answer">Trainix automatically detects new personal records when you finish a workout. It tracks four types: estimated 1RM (strength), max weight lifted, max volume in a set (weight × reps), and max reps.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What is estimated 1RM?</div>
+      <div class="faq-answer">The estimated 1 Rep Max is calculated using the Epley formula: weight × (1 + reps/30). It gives you a comparable strength score across different rep ranges.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Where can I see all my PRs?</div>
+      <div class="faq-answer">Go to <strong>Analytics → Personal Records</strong>. You can view your top lifts across all exercises. Tap any exercise to see its full progress history, estimated 1RM trend, and weekly volume chart.</div>
+    </div>
+  </div>
+
+  <!-- Training Plans -->
+  <div class="faq-section">
+    <h2>Training Plans</h2>
+    <div class="faq-item">
+      <div class="faq-question">How do I start a training plan?</div>
+      <div class="faq-answer">Go to the <strong>Plans tab</strong>, choose a program (e.g. Beginner Full Body), tap it to preview the schedule, then press <strong>Activate Plan</strong>. An active plan banner will appear on the Home screen — tap "Start" to begin today's session.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What happens when I complete a plan day workout?</div>
+      <div class="faq-answer">The plan automatically advances to the next day. Your progress is saved, and the next workout will be ready on the Home screen banner.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Can I have multiple plans active at once?</div>
+      <div class="faq-answer">No — only one plan can be active at a time. You can switch plans at any time from the Plans tab, but your progress on the current plan will be reset.</div>
+    </div>
+  </div>
+
+  <!-- Analytics -->
+  <div class="faq-section">
+    <h2>Analytics</h2>
+    <div class="faq-item">
+      <div class="faq-question">Why is my volume chart empty?</div>
+      <div class="faq-answer">The volume chart requires <strong>Trainix Pro</strong>. Free users see workout frequency and consistency stats. On Pro, volume trend and strength progress charts unlock. Make sure you have at least 1 completed workout with logged sets for data to appear.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What does "Consistency" mean in analytics?</div>
+      <div class="faq-answer">Consistency shows what percentage of your completed past weeks hit your weekly session goal. It excludes the current in-progress week. New users will see limited data until a few full weeks have passed. This stat is free for all users.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What are Coach Insights?</div>
+      <div class="faq-answer">Coach Insights are automated observations from your training data — things like consistency, volume changes, and push/pull balance. They appear on the Home screen after you've logged a few workouts, and are available to all users.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Which analytics features require Pro?</div>
+      <div class="faq-answer"><strong>Free:</strong> workout frequency chart, streak, consistency %, personal records list, and Coach Insights.<br /><br /><strong>Pro only:</strong> Strength Progress (1RM trend per exercise), Volume Trend chart, per-exercise history, and advanced strength analytics.</div>
+    </div>
+  </div>
+
+  <!-- Nutrition -->
+  <div class="faq-section">
+    <h2>Nutrition</h2>
+    <div class="faq-item">
+      <div class="faq-question">How do I log food?</div>
+      <div class="faq-answer">Open the <strong>Nutrition tab</strong> and tap the <strong>+</strong> button to add a food entry. You can search from the built-in food database, scan a barcode, or add your own custom foods.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do I need Pro to use Nutrition features?</div>
+      <div class="faq-answer">Basic food logging (today's entries) is available to all users. <strong>Trainix Pro</strong> unlocks: setting custom calorie and macro targets, adjusting activity level, viewing past days' nutrition history, and editing macro split targets.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Can I add my own foods?</div>
+      <div class="faq-answer">Yes! Tap <strong>Custom Foods</strong> in the Nutrition tab to create foods with your own calorie and macro values. You can also bulk-import foods via a CSV file.</div>
+    </div>
+  </div>
+
+  <!-- Body Metrics -->
+  <div class="faq-section">
+    <h2>Body Metrics &amp; Measurements</h2>
+    <div class="faq-item">
+      <div class="faq-question">How do I log my body weight?</div>
+      <div class="faq-answer">Go to <strong>Profile → Body Metrics</strong>. Tap <strong>+ Log Weight</strong> and enter your current weight. Body weight and body fat % tracking are available for free.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What body measurements can I track?</div>
+      <div class="faq-answer">All users can track <strong>body weight</strong> and <strong>body fat %</strong> for free. <strong>Trainix Pro</strong> adds full body measurements: waist, hips, chest, biceps, thighs, and calves — with trend tracking and progress snapshots.</div>
+    </div>
+  </div>
+
+  <!-- Backup & Data -->
+  <div class="faq-section">
+    <h2>Backup &amp; Data</h2>
+    <div class="faq-item">
+      <div class="faq-question">How do I back up my data?</div>
+      <div class="faq-answer">Go to <strong>Profile → Backup &amp; Restore → Back Up Now</strong>. This creates a full JSON backup of your workouts, body metrics, and templates, then lets you save it to Files, iCloud, or share it anywhere.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Can I restore from a backup?</div>
+      <div class="faq-answer">Yes! Go to <strong>Profile → Backup &amp; Restore → Restore from File</strong>. Select your previously saved .json backup file and Trainix will restore all your workout history, body metrics, and templates.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Will I lose data if I delete the app?</div>
+      <div class="faq-answer">Yes — all data is stored on-device. Back up regularly using the Backup &amp; Restore section to avoid losing your workout history.</div>
+    </div>
+  </div>
+
+  <!-- Trainix Coach -->
+  <div class="faq-section">
+    <h2>Trainix Coach</h2>
+    <div class="faq-item">
+      <div class="faq-question">Is Trainix Coach free?</div>
+      <div class="faq-answer">Trainix Coach is a <strong>Trainix Pro</strong> feature. Upgrade to Pro to unlock personalised coaching chat based on your real training data — ask about programming, nutrition, recovery, or technique.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What data does Trainix Coach use?</div>
+      <div class="faq-answer">The coach uses your training statistics — weekly session count, total volume, movement balance, and current insights — to personalise advice. Your personal details are never shared with third parties.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Is there a daily limit on Trainix Coach messages?</div>
+      <div class="faq-answer">Trainix Pro does not enforce a low daily cap right now. Short anti-spam cooldowns may apply if you send many messages in a row.</div>
+    </div>
+  </div>
+
+  <!-- Habits -->
+  <div class="faq-section">
+    <h2>Habit Tracking</h2>
+    <div class="faq-item">
+      <div class="faq-question">How do I add habits to track?</div>
+      <div class="faq-answer">Go to the <strong>Habits tab</strong> and tap <strong>+ Add Habit</strong>. Choose from preset habits (water, sleep, steps, protein, etc.) or create a custom one. Check them off daily to build your streak.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How many habits can I track for free?</div>
+      <div class="faq-answer">Free users can track up to <strong>3 habits</strong>. Upgrade to <strong>Trainix Pro</strong> to unlock unlimited habits.</div>
+    </div>
+  </div>
+
+  <!-- Health & Wearables -->
+  <div class="faq-section">
+    <h2>Health &amp; Wearables</h2>
+    <div class="faq-item">
+      <div class="faq-question">How do I sync with Apple Health?</div>
+      <div class="faq-answer">Go to <strong>Settings → Workout Experience → Apple Health Sync</strong> and toggle it on. You'll be asked to grant permissions. Once enabled, workouts are automatically exported after each session.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How do I sync with Health Connect (Android)?</div>
+      <div class="faq-answer">Go to <strong>Settings → Workout Experience → Health Connect Sync</strong> and toggle it on. Make sure Google's Health Connect app is installed on your device. Workouts are exported automatically when you finish a session.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Why does HealthKit show unavailable on Simulator?</div>
+      <div class="faq-answer">Apple HealthKit is only available on physical iPhones. It will not work in the iOS Simulator — this is an Apple limitation, not a Trainix bug.</div>
+    </div>
+  </div>
+
+  <!-- Trainix Pro -->
+  <div class="faq-section">
+    <h2>Trainix Pro</h2>
+    <div class="faq-item">
+      <div class="faq-question">What's included in Trainix Pro?</div>
+      <div class="faq-answer">Trainix Pro unlocks:<ul>
+<li>Trainix Coach — personalised coaching chat</li>
+<li>Full analytics: Strength Progress, Volume Trend, per-exercise history</li>
+<li>Advanced training plans (intermediate &amp; advanced programs)</li>
+<li>Body measurements (waist, hips, chest, arms, legs)</li>
+<li>Exercise Library — intermediate &amp; advanced exercises with coaching cues</li>
+<li>Nutrition goal setting, custom macro targets, past-day history</li>
+<li>Unlimited habits (free plan: max 3)</li>
+<li>Ad-free experience</li>
+</ul></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How do I restore a previous purchase?</div>
+      <div class="faq-answer">Go to <strong>Profile → Trainix Pro → Restore Purchase</strong>. Make sure you're signed in to the same App Store / Google Play account used for the original purchase.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Can I use Trainix on multiple devices?</div>
+      <div class="faq-answer">Your Pro subscription is tied to your App Store or Google Play account and can be shared across devices using the same account. However, workout data is stored locally per device — use the Backup &amp; Restore feature to transfer data.</div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="card">
+    <p><strong>Still have questions?</strong> We're happy to help.</p>
+    <p><strong>Email:</strong> <a href="mailto:codeyard.studio@gmail.com">codeyard.studio@gmail.com</a></p>
+    <p><strong>Developer:</strong> Codeyard Studio</p>
+  </div>
+
+  <p style="text-align: center; color: var(--muted); font-size: 13px; margin-top: 32px;">&copy; 2026 Codeyard Studio. All rights reserved.</p>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(function(q) {
+      q.addEventListener('click', function() {
+        var answer = q.nextElementSibling;
+        var isOpen = answer.classList.contains('open');
+        q.classList.toggle('open', !isOpen);
+        answer.classList.toggle('open', !isOpen);
+      });
+    });
+  </script>
+
+</body>
+</html>

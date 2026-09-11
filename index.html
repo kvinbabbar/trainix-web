@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       ESSENTIAL META TAGS
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO -->
+  <title>Trainix – Workout Tracker, Nutrition, Habits & Coach | iOS & Android</title>
+  <meta name="description" content="Trainix is your fitness studio for workouts, nutrition, and habits — log lifts, track PRs, follow training plans, share workout cards, and get coached with Trainix Pro. Your data stays on your device." />
+  <meta name="keywords" content="workout tracker, gym log app, fitness tracker, personal record tracker, training plans app, AI fitness coach, strength training app, workout log, exercise tracker, gym app iOS, gym app Android, Trainix" />
+  <meta name="author" content="Codeyard Studio" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://codeyardstudio.com/trainix/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://codeyardstudio.com/trainix/" />
+  <meta property="og:title" content="Trainix – Workout Tracker, Nutrition, Habits & Coach" />
+  <meta property="og:description" content="Log workouts, track PRs, follow plans, share recap cards, and build habits — all stored privately on your device. Free on iOS & Android." />
+  <meta property="og:image" content="https://codeyardstudio.com/trainix/assets/icon-512.png" />
+  <meta property="og:site_name" content="Trainix" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trainix – Workout Tracker, Nutrition, Habits & Coach" />
+  <meta name="twitter:description" content="Log workouts, track PRs, follow plans, share recap cards, and build habits — all stored privately on your device." />
+  <meta name="twitter:image" content="https://codeyardstudio.com/trainix/assets/icon-512.png" />
+
+  <!-- Mobile / App -->
+  <meta name="theme-color" content="#3B82F6" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Trainix" />
+  <meta name="application-name" content="Trainix" />
+  <meta name="apple-itunes-app" content="app-id=6760948921" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/icon-180.png" />
+  <link rel="apple-touch-icon" href="assets/icon-180.png" />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- ============================================================
+       STRUCTURED DATA (JSON-LD)
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://codeyardstudio.com/trainix/#website",
+        "url": "https://codeyardstudio.com/trainix/",
+        "name": "Trainix",
+        "description": "Workout tracker, AI coach, and training plans app for iOS and Android",
+        "publisher": { "@id": "https://codeyardstudio.com/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://codeyardstudio.com/#organization",
+        "name": "Codeyard Studio",
+        "url": "https://codeyardstudio.com/",
+        "email": "codeyard.studio@gmail.com"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://codeyardstudio.com/trainix/#app",
+        "name": "Trainix – Workout Tracker",
+        "description": "An all-in-one fitness tracker for logging workouts, tracking personal records, following structured training plans, and getting AI-powered coaching. Workout data is stored locally on-device.",
+        "url": "https://codeyardstudio.com/trainix/",
+        "image": "https://codeyardstudio.com/trainix/assets/icon-512.png",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": ["iOS", "Android"],
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@id": "https://codeyardstudio.com/#organization" },
+        "featureList": [
+          "Fast set logging with ghost-text autofill and rest timer",
+          "150+ exercise library with how-to guides and custom exercises",
+          "Automatic personal record detection",
+          "Structured training plans and personalized plan generation (Pro)",
+          "Coach Insights, streaks, and workout frequency analytics",
+          "Volume trend, strength progress, and PR charts (Pro)",
+          "Trainix Coach — AI coaching chat tailored to your training (Pro)",
+          "Nutrition logging, macro goals, and barcode scan (Pro)",
+          "Habit tracking with daily streaks",
+          "Body metrics, measurements, and RPE tracking (Pro)",
+          "Visual workout share cards",
+          "Apple Health / Health Connect sync",
+          "Local backup, restore, and CSV export (Pro)"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://codeyardstudio.com/trainix/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Trainix free to use?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Trainix is free to download and covers workout logging, PR tracking, training plans, nutrition, habits, and Coach Insights. Trainix Pro unlocks Trainix Coach, full analytics, and more." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Trainix require an account or internet connection?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No sign-up is required. Your workouts are logged and stored locally on your device, so you can train even without an internet connection." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Trainix sync with Apple Health or Health Connect?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can enable Apple Health (iOS) or Health Connect (Android) sync in Settings to export completed workouts, body weight, and body fat percentage." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Trainix Pro include?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Trainix Pro unlocks Trainix Coach, full analytics and PR charts, personalized training plans, RPE tracking, unlimited templates, barcode food scan, full body measurements, nutrition goals, CSV export, and an ad-free experience." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- ============================================================
+       CSS STYLES
+  ============================================================ -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand: #3B82F6;
+      --brand-dark: #2563EB;
+      --brand-light: #60A5FA;
+      --brand-subtle: rgba(59,130,246,.12);
+      --text-primary: #F5F5F7;
+      --text-secondary: #D1D1D6;
+      --text-muted: #8E8E93;
+      --bg: #0D0D0F;
+      --bg-alt: #111114;
+      --bg-card: #1A1A1E;
+      --border: #2A2A2E;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.3);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.35);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,.45);
+      --radius: 16px;
+      --radius-sm: 8px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    [id] { scroll-margin-top: 80px; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ---- UTILITIES ---- */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+    .text-brand { color: var(--brand); }
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--brand-subtle); color: var(--brand-light);
+      font-size: 12px; font-weight: 600; letter-spacing: .04em;
+      text-transform: uppercase; padding: 6px 14px; border-radius: 100px;
+      border: 1px solid rgba(59,130,246,.25);
+    }
+
+    /* ---- NAVIGATION ---- */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,13,15,.85);
+      backdrop-filter: saturate(180%) blur(16px);
+      -webkit-backdrop-filter: saturate(180%) blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text-primary); }
+    .nav-logo-icon { width: 36px; height: 36px; border-radius: 10px; overflow: hidden; flex-shrink: 0; }
+    .nav-logo-icon img { width: 36px; height: 36px; display: block; object-fit: cover; }
+    .nav-logo-name { font-weight: 700; font-size: 18px; }
+    .nav-links { display: flex; align-items: center; gap: 6px; }
+    .nav-links a {
+      text-decoration: none; color: var(--text-secondary); font-size: 14px; font-weight: 500;
+      padding: 8px 14px; border-radius: var(--radius-sm); transition: color .2s, background .2s;
+    }
+    .nav-links a:hover { color: var(--text-primary); background: var(--bg-alt); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 24px; border-radius: 100px; font-size: 15px; font-weight: 600;
+      text-decoration: none; cursor: pointer; border: none; transition: all .2s; white-space: nowrap;
+    }
+    .btn-primary { background: var(--brand); color: #fff; }
+    .btn-primary:hover { background: var(--brand-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(59,130,246,.35); }
+    .btn-secondary { background: transparent; color: var(--text-primary); border: 1.5px solid var(--border); }
+    .btn-secondary:hover { background: var(--bg-alt); transform: translateY(-1px); }
+    .btn-sm { padding: 8px 18px; font-size: 13px; }
+
+    /* ---- HERO ---- */
+    .hero { position: relative; overflow: hidden; padding: 96px 0 80px; text-align: center; }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(59,130,246,.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow { margin-bottom: 24px; }
+    .hero h1 { font-size: clamp(36px, 6vw, 70px); font-weight: 900; line-height: 1.08; letter-spacing: -.03em; margin-bottom: 20px; }
+    .hero h1 .highlight { color: var(--brand-light); }
+    .hero p.subtitle { font-size: clamp(16px, 2.5vw, 20px); color: var(--text-secondary); max-width: 580px; margin: 0 auto 40px; line-height: 1.65; }
+    .hero-cta { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+    .hero-trust { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 16px; flex-wrap: wrap; }
+    .hero-trust-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-muted); font-weight: 500; }
+    .hero-trust-item svg { color: var(--brand-light); }
+    .store-badge-link { display: inline-block; transition: transform .2s, opacity .2s; line-height: 0; }
+    .store-badge-link:hover { transform: translateY(-2px); opacity: .92; }
+    .store-badge { display: block; height: 54px; width: auto; }
+    .hero-app-icon { margin-bottom: 24px; }
+    .hero-app-icon img { width: 96px; height: 96px; border-radius: 24px; box-shadow: 0 12px 40px rgba(59,130,246,.28); }
+    .cta-badge { height: 54px; width: auto; display: block; }
+
+    /* ---- PHONE MOCKUP ---- */
+    .hero-phones { position: relative; margin: 64px auto 0; max-width: 700px; height: 460px; }
+    .phone-card {
+      position: absolute; width: 220px; background: var(--bg-card);
+      border-radius: 28px; box-shadow: var(--shadow-lg), 0 0 0 1px var(--border);
+      overflow: hidden; transition: transform .4s ease;
+    }
+    .phone-card:nth-child(1) { left: 50%; transform: translateX(-50%) rotate(-6deg); top: 20px; z-index: 1; }
+    .phone-card:nth-child(2) { left: 50%; transform: translateX(-50%); top: 0; z-index: 3; }
+    .phone-card:nth-child(3) { left: 50%; transform: translateX(-50%) rotate(6deg); top: 20px; z-index: 1; }
+    .phone-card:hover { transform: translateX(-50%) translateY(-8px) !important; z-index: 10 !important; }
+    .phone-screen { background: linear-gradient(160deg, #101014 0%, #15161c 50%, #101a2e 100%); padding: 20px 16px; min-height: 380px; }
+    .phone-notch { width: 80px; height: 8px; background: #000; border-radius: 100px; margin: 0 auto 20px; }
+    .phone-stat { background: rgba(255,255,255,.06); border-radius: 14px; padding: 14px; margin-bottom: 10px; }
+    .phone-stat-label { font-size: 10px; color: rgba(255,255,255,.5); margin-bottom: 4px; }
+    .phone-stat-value { font-size: 22px; font-weight: 800; color: #fff; }
+    .phone-stat-sub { font-size: 10px; color: #60A5FA; margin-top: 2px; }
+    .phone-set { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.05); }
+    .phone-set-icon { width: 32px; height: 32px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+    .phone-set-info { flex: 1; }
+    .phone-set-name { font-size: 11px; color: rgba(255,255,255,.85); font-weight: 600; }
+    .phone-set-date { font-size: 10px; color: rgba(255,255,255,.4); }
+    .phone-set-value { font-size: 12px; font-weight: 700; color: #60A5FA; }
+    .phone-pr-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(96,165,250,.15); color: #60A5FA; font-size: 11px; font-weight: 700; padding: 6px 10px; border-radius: 100px; margin-bottom: 10px; }
+
+    /* ---- SECTIONS ---- */
+    section { padding: 96px 0; }
+    .section-label { text-align: center; margin-bottom: 16px; }
+    .section-title { font-size: clamp(28px, 4vw, 44px); font-weight: 800; letter-spacing: -.02em; text-align: center; margin-bottom: 16px; line-height: 1.15; }
+    .section-subtitle { font-size: 17px; color: var(--text-secondary); text-align: center; max-width: 560px; margin: 0 auto 56px; line-height: 1.65; }
+
+    /* ---- FEATURES GRID ---- */
+    .features-bg { background: var(--bg-alt); }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .feature-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: all .25s; position: relative; overflow: hidden; }
+    .feature-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(59,130,246,.06) 0%, transparent 60%); opacity: 0; transition: opacity .25s; }
+    .feature-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); border-color: rgba(59,130,246,.3); }
+    .feature-card:hover::before { opacity: 1; }
+    .feature-icon { width: 52px; height: 52px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; background: var(--brand-subtle); }
+    .feature-icon [data-lucide] { width: 26px; height: 26px; color: var(--brand-light); stroke-width: 1.75; }
+    .feature-title { font-size: 18px; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .feature-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.65; }
+    .pro-tag { font-size: 10px; font-weight: 700; letter-spacing: .04em; color: var(--brand-light); background: var(--brand-subtle); border: 1px solid rgba(59,130,246,.25); padding: 2px 8px; border-radius: 100px; }
+
+    /* ---- PRIVACY SECTION ---- */
+    .privacy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    @media (max-width: 768px) { .privacy-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .privacy-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+    .privacy-list li { display: flex; align-items: flex-start; gap: 16px; }
+    .privacy-list-icon { width: 40px; height: 40px; border-radius: 12px; background: var(--brand-subtle); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .privacy-list-icon [data-lucide] { width: 20px; height: 20px; color: var(--brand-light); stroke-width: 1.75; }
+    .privacy-list-text strong { font-size: 16px; display: block; margin-bottom: 3px; }
+    .privacy-list-text p { font-size: 14px; color: var(--text-secondary); }
+    .privacy-visual { background: linear-gradient(135deg, #101420 0%, #131b2e 100%); border: 1px solid var(--border); border-radius: 24px; padding: 40px; text-align: center; box-shadow: var(--shadow-lg); }
+    .privacy-visual-icon { width: 72px; height: 72px; color: var(--brand-light); stroke-width: 1.25; margin: 0 auto 16px; }
+    .privacy-visual h3 { color: #fff; font-size: 20px; margin-bottom: 10px; }
+    .privacy-visual p { color: rgba(255,255,255,.6); font-size: 14px; line-height: 1.65; }
+    .privacy-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 24px; }
+    .privacy-pill { background: rgba(255,255,255,.08); color: rgba(255,255,255,.85); font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 100px; border: 1px solid rgba(255,255,255,.1); }
+
+    /* ---- HOW IT WORKS ---- */
+    .steps-bg { background: var(--bg-alt); }
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; }
+    .step-card { text-align: center; padding: 24px; }
+    .step-number { width: 56px; height: 56px; border-radius: 50%; background: var(--brand); color: #fff; font-weight: 800; font-size: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+    .step-title { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .step-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.65; }
+
+    /* ---- FREE VS PRO ---- */
+    .plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; max-width: 800px; margin: 0 auto; }
+    .plan-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+    .plan-card.pro { border-color: var(--brand); box-shadow: 0 0 0 1px var(--brand), var(--shadow-md); }
+    .plan-name { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+    .plan-tagline { font-size: 14px; color: var(--text-secondary); margin-bottom: 24px; }
+    .plan-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+    .plan-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text-secondary); }
+    .plan-features li [data-lucide] { width: 18px; height: 18px; color: var(--brand-light); flex-shrink: 0; margin-top: 1px; }
+    .plan-card .btn { width: 100%; }
+
+    /* ---- FAQ ---- */
+    .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; }
+    .faq-question { width: 100%; padding: 20px 24px; text-align: left; font-size: 16px; font-weight: 600; color: var(--text-primary); background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: background .2s; }
+    .faq-question:hover { background: var(--bg-alt); }
+    .faq-question svg { flex-shrink: 0; transition: transform .25s; color: var(--text-muted); }
+    .faq-item.open .faq-question svg { transform: rotate(180deg); }
+    .faq-answer { padding: 0 24px; max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; }
+    .faq-item.open .faq-answer { padding: 0 24px 20px; max-height: 300px; }
+    .faq-answer p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
+    .faq-more { text-align: center; margin-top: 28px; }
+
+    /* ---- CTA SECTION ---- */
+    .cta-section { background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%); text-align: center; color: #fff; padding: 96px 0; }
+    .cta-section h2 { font-size: clamp(28px, 4vw, 48px); font-weight: 800; margin-bottom: 16px; letter-spacing: -.02em; }
+    .cta-section p { font-size: 18px; opacity: .88; margin-bottom: 40px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .cta-buttons { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .btn-white { background: #fff; color: var(--brand-dark); font-weight: 700; padding: 14px 28px; border-radius: 100px; text-decoration: none; font-size: 15px; transition: all .2s; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+    .btn-white-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.5); padding: 14px 28px; border-radius: 100px; text-decoration: none; font-size: 15px; font-weight: 600; transition: all .2s; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-white-outline:hover { border-color: #fff; background: rgba(255,255,255,.1); transform: translateY(-2px); }
+
+    /* ---- FOOTER ---- */
+    footer { background: var(--bg-alt); border-top: 1px solid var(--border); padding: 56px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand .nav-logo { margin-bottom: 14px; }
+    .footer-brand p { font-size: 14px; color: var(--text-muted); line-height: 1.65; max-width: 260px; }
+    .footer-col h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a { text-decoration: none; color: var(--text-secondary); font-size: 14px; transition: color .2s; }
+    .footer-col ul a:hover { color: var(--brand-light); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--text-muted); }
+    .footer-bottom a { color: var(--text-muted); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--brand-light); }
+
+    /* ---- ANIMATIONS ---- */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 768px) {
+      section { padding: 64px 0; }
+      .hero { padding: 64px 0 56px; }
+      .nav-links { display: none; }
+      .hero-phones { height: 360px; }
+      .phone-card { width: 180px; }
+      .phone-card:nth-child(1) { display: none; }
+      .phone-card:nth-child(3) { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo" aria-label="Trainix home">
+        <div class="nav-logo-icon">
+          <img src="assets/icon-180.png" alt="Trainix app icon" width="36" height="36" loading="eager" />
+        </div>
+        <span class="nav-logo-name">Trainix</span>
+      </a>
+      <div class="nav-links" role="menubar">
+        <a href="#features" role="menuitem">Features</a>
+        <a href="#privacy" role="menuitem">Privacy</a>
+        <a href="#pro" role="menuitem">Pro</a>
+        <a href="faq.html" role="menuitem">FAQ</a>
+      </div>
+      <div class="nav-links">
+        <a href="#download" class="btn btn-primary btn-sm" role="button">Download Free</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <header class="hero" role="banner">
+    <div class="container">
+      <div class="hero-app-icon">
+        <img src="assets/icon-180.png" alt="Trainix app icon" width="96" height="96" loading="eager" />
+      </div>
+
+      <div class="hero-eyebrow">
+        <span class="badge">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><circle cx="6" cy="6" r="6"/></svg>
+          Free to Start · Works Offline
+        </span>
+      </div>
+
+      <h1>Your Fitness Studio.<br /><span class="highlight">Workouts, Nutrition &amp; Habits.</span></h1>
+
+      <p class="subtitle">
+        Trainix helps you log lifts in seconds, chase PRs, follow structured plans, track nutrition and habits, and get coached by Trainix Coach. <strong>Your training data stays on your device.</strong>
+      </p>
+
+      <div id="download" class="hero-cta">
+        <a href="https://apps.apple.com/app/id6760948921" class="store-badge-link" aria-label="Download Trainix on the App Store">
+          <img src="assets/badge-app-store.svg" alt="Download on the App Store" class="store-badge" width="162" height="54" loading="eager" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.codeyard.trainix" class="store-badge-link" aria-label="Get Trainix on Google Play">
+          <img src="assets/badge-google-play-tight.png" alt="Get it on Google Play" class="store-badge" width="181" height="54" loading="eager" />
+        </a>
+      </div>
+
+      <div class="hero-trust" role="list" aria-label="Key selling points">
+        <div class="hero-trust-item" role="listitem">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Automatic PR Detection
+        </div>
+        <div class="hero-trust-item" role="listitem">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Share Workout Cards
+        </div>
+        <div class="hero-trust-item" role="listitem">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          No Sign-Up Required
+        </div>
+        <div class="hero-trust-item" role="listitem">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          Apple Health &amp; Health Connect
+        </div>
+        <div class="hero-trust-item" role="listitem">
+          <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          iOS &amp; Android
+        </div>
+      </div>
+
+      <!-- Phone Mockups -->
+      <div class="hero-phones" aria-hidden="true">
+        <div class="phone-card" style="left:15%; transform:rotate(-8deg);">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="phone-pr-badge">🏆 New PR!</div>
+            <div class="phone-stat">
+              <div class="phone-stat-label">Bench Press · Est. 1RM</div>
+              <div class="phone-stat-value">112.5 kg</div>
+              <div class="phone-stat-sub">↑ 5kg vs last session</div>
+            </div>
+            <div class="phone-set">
+              <div class="phone-set-icon" style="background:rgba(96,165,250,.15);">💪</div>
+              <div class="phone-set-info">
+                <div class="phone-set-name">Bench Press</div>
+                <div class="phone-set-date">Set 3 of 4</div>
+              </div>
+              <div class="phone-set-value">100kg × 5</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="phone-card">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="phone-stat">
+              <div class="phone-stat-label">This Week</div>
+              <div class="phone-stat-value">4 / 5 Workouts</div>
+              <div class="phone-stat-sub">🔥 12-day streak</div>
+            </div>
+            <div class="phone-set">
+              <div class="phone-set-icon" style="background:rgba(96,165,250,.15);">🏋️</div>
+              <div class="phone-set-info">
+                <div class="phone-set-name">Push Day A</div>
+                <div class="phone-set-date">Today</div>
+              </div>
+              <div class="phone-set-value">6.4k kg</div>
+            </div>
+            <div class="phone-set">
+              <div class="phone-set-icon" style="background:rgba(96,165,250,.15);">🦵</div>
+              <div class="phone-set-info">
+                <div class="phone-set-name">Leg Day</div>
+                <div class="phone-set-date">2 days ago</div>
+              </div>
+              <div class="phone-set-value">8.1k kg</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="phone-card" style="left:85%; transform:translateX(-100%) rotate(8deg);">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div class="phone-stat">
+              <div class="phone-stat-label">Trainix Coach</div>
+              <div class="phone-stat-value" style="font-size:14px;line-height:1.5;">"Your volume is up 18% this month — great consistency on push days."</div>
+            </div>
+            <div class="phone-set">
+              <div class="phone-set-icon" style="background:rgba(96,165,250,.15);">📊</div>
+              <div class="phone-set-info">
+                <div class="phone-set-name">Weekly Consistency</div>
+                <div class="phone-set-date">Last 8 weeks</div>
+              </div>
+              <div class="phone-set-value">92%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       FEATURES
+  ============================================================ -->
+  <section id="features" class="features-bg" aria-labelledby="features-heading">
+    <div class="container">
+      <div class="section-label"><span class="badge">What's inside</span></div>
+      <h2 class="section-title" id="features-heading">Everything you need to train smarter</h2>
+      <p class="section-subtitle">From logging your first set to advanced strength analytics — Trainix grows with you.</p>
+
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i data-lucide="zap"></i></div>
+          <h3 class="feature-title">Log Sets in Seconds</h3>
+          <p class="feature-desc">Ghost-text pre-fills your last weight and reps, with an auto rest timer between sets. Confirm and log — minimal typing.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i data-lucide="search"></i></div>
+          <h3 class="feature-title">150+ Exercise Library</h3>
+          <p class="feature-desc">Search by muscle, equipment, and movement type. How-to guides for exercises, plus unlimited custom movements with Pro.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i data-lucide="trophy"></i></div>
+          <h3 class="feature-title">Automatic PR Tracking</h3>
+          <p class="feature-desc">Trainix detects new personal records after every session — estimated 1RM, max weight, max volume, and max reps.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i data-lucide="calendar-days"></i></div>
+          <h3 class="feature-title">Training Plans</h3>
+          <p class="feature-desc">Follow built-in programs day by day, or generate a personalized plan with Pro. Progress advances automatically after each session.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i data-lucide="bar-chart-3"></i></div>
+          <h3 class="feature-title">Analytics &amp; Coach Insights</h3>
+          <p class="feature-desc">Free: streaks, consistency, workout frequency, and PR history. Pro unlocks volume trends, strength progress, and movement breakdowns.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i data-lucide="bot"></i></div>
+          <h3 class="feature-title">Trainix Coach <span class="pro-tag">PRO</span></h3>
+          <p class="feature-desc">In-app coaching chat tailored to your logged workouts — programming, nutrition, recovery, technique, and suggested questions.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i data-lucide="utensils"></i></div>
+          <h3 class="feature-title">Nutrition Tracking</h3>
+          <p class="feature-desc">Log meals from a built-in food database and custom foods. Pro adds barcode scanning, macro goals, and AI food photo logging.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i data-lucide="share-2"></i></div>
+          <h3 class="feature-title">Workout Share Cards</h3>
+          <p class="feature-desc">After each session, share a polished recap image with stats, PRs, and session summary — ready for WhatsApp, Instagram, and more.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i data-lucide="flame"></i></div>
+          <h3 class="feature-title">Habits &amp; Body Metrics</h3>
+          <p class="feature-desc">Track daily habits with streaks, log body weight and body fat, and unlock full measurements, RPE per set, and trends with Pro.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon"><i data-lucide="heart-pulse"></i></div>
+          <h3 class="feature-title">Health Sync &amp; Backup</h3>
+          <p class="feature-desc">Export workouts to Apple Health or Health Connect. Back up and restore locally as JSON/ZIP, with CSV export on Pro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRIVACY
+  ============================================================ -->
+  <section id="privacy" aria-labelledby="privacy-heading">
+    <div class="container">
+      <div class="privacy-grid">
+        <div class="fade-in">
+          <div class="section-label" style="text-align:left;"><span class="badge">Privacy first</span></div>
+          <h2 class="section-title" id="privacy-heading" style="text-align:left;">Your training data stays yours</h2>
+          <ul class="privacy-list">
+            <li>
+              <div class="privacy-list-icon"><i data-lucide="database"></i></div>
+              <div class="privacy-list-text">
+                <strong>Stored on your device</strong>
+                <p>Workouts, PRs, plans, and metrics are saved locally using SQLite — not on a server.</p>
+              </div>
+            </li>
+            <li>
+              <div class="privacy-list-icon"><i data-lucide="user-x"></i></div>
+              <div class="privacy-list-text">
+                <strong>No account required</strong>
+                <p>Start logging workouts immediately. No sign-up, no email, no password.</p>
+              </div>
+            </li>
+            <li>
+              <div class="privacy-list-icon"><i data-lucide="download"></i></div>
+              <div class="privacy-list-text">
+                <strong>Export anytime</strong>
+                <p>Create a full JSON backup of your training history whenever you want, and restore it on any device.</p>
+              </div>
+            </li>
+            <li>
+              <div class="privacy-list-icon"><i data-lucide="toggle-left"></i></div>
+              <div class="privacy-list-text">
+                <strong>Health sync is optional</strong>
+                <p>Apple Health and Health Connect integration is entirely opt-in and can be turned off at any time.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="privacy-visual fade-in">
+          <i data-lucide="shield-check" class="privacy-visual-icon"></i>
+          <h3>Built to keep your data private</h3>
+          <p>No cloud sync, no third-party data sales — your training history belongs to you.</p>
+          <div class="privacy-pills">
+            <span class="privacy-pill">On-Device SQLite</span>
+            <span class="privacy-pill">No Login</span>
+            <span class="privacy-pill">Local Backups</span>
+            <span class="privacy-pill">Opt-In Health Sync</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW IT WORKS
+  ============================================================ -->
+  <section class="steps-bg" aria-labelledby="how-heading">
+    <div class="container">
+      <div class="section-label"><span class="badge">How it works</span></div>
+      <h2 class="section-title" id="how-heading">From first set to next PR</h2>
+      <p class="section-subtitle">Trainix is designed to feel like a stopwatch — open it, log your workout, close it.</p>
+
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Start a Workout</h3>
+          <p class="step-desc">Begin from scratch, a saved template, or an active training plan day.</p>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Log Sets Fast</h3>
+          <p class="step-desc">Ghost text pre-fills your last weight and reps — just confirm and tap the checkmark.</p>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Track Progress</h3>
+          <p class="step-desc">PRs, streaks, and consistency are calculated automatically after every session.</p>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-number">4</div>
+          <h3 class="step-title">Get Coached</h3>
+          <p class="step-desc">Review Coach Insights for free, share your recap card, or chat with Trainix Coach on Pro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FREE VS PRO
+  ============================================================ -->
+  <section id="pro" aria-labelledby="pro-heading">
+    <div class="container">
+      <div class="section-label"><span class="badge">Free vs Pro</span></div>
+      <h2 class="section-title" id="pro-heading">Free for training. Pro for going further.</h2>
+      <p class="section-subtitle">Everything you need to log and track workouts is free — Trainix Pro adds advanced training intelligence.</p>
+
+      <div class="plans-grid">
+        <div class="plan-card fade-in">
+          <div class="plan-name">Free</div>
+          <p class="plan-tagline">Everything you need to start training with structure.</p>
+          <ul class="plan-features">
+            <li><i data-lucide="check"></i> Unlimited workout logging &amp; history</li>
+            <li><i data-lucide="check"></i> Automatic PR detection &amp; recap share cards</li>
+            <li><i data-lucide="check"></i> Streaks, consistency &amp; Coach Insights</li>
+            <li><i data-lucide="check"></i> Beginner training plans &amp; up to 3 templates</li>
+            <li><i data-lucide="check"></i> Nutrition logging &amp; habit tracking</li>
+            <li><i data-lucide="check"></i> Body weight &amp; body fat tracking</li>
+            <li><i data-lucide="check"></i> Local backup, restore &amp; Health sync</li>
+          </ul>
+          <a href="#download" class="btn btn-secondary">Get Started Free</a>
+        </div>
+        <div class="plan-card pro fade-in">
+          <div class="plan-name">Trainix Pro</div>
+          <p class="plan-tagline">Advanced training intelligence, unlocked.</p>
+          <ul class="plan-features">
+            <li><i data-lucide="check"></i> Trainix Coach — personalised coaching chat</li>
+            <li><i data-lucide="check"></i> Volume trend, strength progress &amp; PR charts</li>
+            <li><i data-lucide="check"></i> Personalized &amp; advanced training plans</li>
+            <li><i data-lucide="check"></i> RPE tracking, full measurements &amp; cardio analytics</li>
+            <li><i data-lucide="check"></i> Barcode scan, nutrition goals &amp; unlimited templates</li>
+            <li><i data-lucide="check"></i> CSV export &amp; unlimited custom exercises</li>
+            <li><i data-lucide="check"></i> Ad-free experience</li>
+          </ul>
+          <a href="#download" class="btn btn-primary">Try Trainix Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FAQ PREVIEW
+  ============================================================ -->
+  <section id="faq" class="features-bg" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-label"><span class="badge">Questions</span></div>
+      <h2 class="section-title" id="faq-heading">Frequently asked questions</h2>
+      <p class="section-subtitle">Quick answers — see the full FAQ for everything else.</p>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Is Trainix free to use? <i data-lucide="chevron-down" width="18" height="18"></i></button>
+          <div class="faq-answer"><p>Yes. Trainix is free to download and covers workout logging, PR tracking, training plans, nutrition, habits, and Coach Insights. Trainix Pro unlocks Trainix Coach, full analytics, and advanced tools.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do I need an account or internet connection? <i data-lucide="chevron-down" width="18" height="18"></i></button>
+          <div class="faq-answer"><p>No. There's no sign-up required, and your workouts are stored locally so you can train without an internet connection.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Does Trainix sync with Apple Health or Health Connect? <i data-lucide="chevron-down" width="18" height="18"></i></button>
+          <div class="faq-answer"><p>Yes — enable it in Settings to automatically export completed workouts, body weight, and body fat percentage.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I back up and restore my data? <i data-lucide="chevron-down" width="18" height="18"></i></button>
+          <div class="faq-answer"><p>Yes. Create a full JSON backup from Profile → Backup &amp; Restore, and restore it on any device at any time.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-more">
+        <a href="faq.html" class="btn btn-secondary">See All FAQs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA
+  ============================================================ -->
+  <section class="cta-section" aria-labelledby="cta-heading">
+    <div class="container">
+      <h2 id="cta-heading">Ready to train smarter?</h2>
+      <p>Download Trainix free on iOS and Android — no sign-up required.</p>
+      <div class="cta-buttons">
+        <a href="https://apps.apple.com/app/id6760948921" class="store-badge-link" aria-label="Download Trainix on the App Store">
+          <img src="assets/badge-app-store.svg" alt="Download on the App Store" class="cta-badge" width="162" height="54" loading="lazy" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.codeyard.trainix" class="store-badge-link" aria-label="Get Trainix on Google Play">
+          <img src="assets/badge-google-play-tight.png" alt="Get it on Google Play" class="cta-badge" width="181" height="54" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">
+            <div class="nav-logo-icon"><img src="assets/icon-180.png" alt="Trainix" width="36" height="36" loading="lazy" /></div>
+            <span class="nav-logo-name">Trainix</span>
+          </a>
+          <p>Your fitness studio for workouts, nutrition, habits, and coaching — built by Codeyard Studio.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pro">Trainix Pro</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="mailto:codeyard.studio@gmail.com">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <time datetime="2026">2026</time> Codeyard Studio. All rights reserved.</p>
+        <a href="https://codeyardstudio.com/">← Back to Codeyard Studio</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    // Scroll fade-in
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in').forEach(function (el) { observer.observe(el); });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        btn.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
