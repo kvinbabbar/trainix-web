@@ -1,6 +1,8 @@
 # Trainix Web
 
-Marketing site and support pages for [Trainix](https://codeyardstudio.com/trainix/) — workout tracker, nutrition, habits, and coaching for iOS and Android.
+Marketing site and support pages for [Trainix](https://trainix.codeyardstudio.com/) — workout tracker, nutrition, habits, and coaching for iOS and Android.
+
+**Live site:** https://trainix.codeyardstudio.com
 
 ## Pages
 
@@ -20,4 +22,6 @@ Open `http://localhost:8080`.
 
 ## Deploy
 
-Static HTML — host on GitHub Pages, Cloudflare Pages, or any static file host. Point `codeyardstudio.com/trainix` (or your chosen domain) at this repo's published output.
+GitHub Pages from `main` with custom domain `trainix.codeyardstudio.com` (see `CNAME`).
+
+Add a DNS `CNAME` record: `trainix` → `kvinbabbar.github.io` (or your Pages host).
